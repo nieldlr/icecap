@@ -1,3 +1,22 @@
+Icecap is my own custom Bitcoin cold storage/paper wallet generator.
+
+The main difference is to obfuscate the private keys for printing/cold storage so that if the paper wallet is lost/stolen, a thief can't merely just import the private key. It is intended that encrypted private keys never be stolen or get lost, but this is just one step more for added paranoia.
+
+Changes from bitaddress.org include:
+
+- Removing excess options (vanity wallet, brain wallet etc)
+- Focusing on bulkwallet as the main method of generation.
+- Generate AES encrypted private keys by default
+- Generate QR codes (public address + aes encrypted private key)
+- The ability to decrypt AES encrypted private keys (the key is displayed in the javascript console)
+
+Development Plan:
+
+- Prettify Generation
+- Figure out why the AES library (same source, but different version) that comes with bitaddress.org fails to encrypt the keys.
+
+Here follows the original bitaddress.org Readme:
+
 bitaddress.org
 JavaScript Client-Side Bitcoin Wallet Generator
 
