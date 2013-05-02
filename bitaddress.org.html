@@ -5910,7 +5910,7 @@
 					<span><label id="bulklabelrowstogenerate">Rows to generate:</label> <input type="text" id="bulklimit" value="3" /></span>
 					<span><input type="button" id="bulkgenerate" value="Generate" onclick="ninja.wallets.bulkwallet.buildCSV(document.getElementById('bulklimit').value * 1, document.getElementById('bulkstartindex').value * 1);" /> </span>
 					<span><label id="aeslabel">Passphrase for AES encryption</label> <input type="text" id="aespassphrase" /></span>
-					<span><label id="aesdecryptlabel">Decrypt</label><input type="text" id="aesdecrypt" /><input type="button" value="Decrypt" onclick="var decrypted = CryptoJS.AES.decrypt(document.getElementById('aesdecrypt').value, document.getElementById('aespassphrase').value); console.log(decrypted.toString(CryptoJS.enc.Utf8));"/></span>
+					<span><label id="aesdecryptlabel">Decrypt</label><input type="text" id="aesdecrypt" /><input type="button" value="Decrypt" onclick="var decrypted = CryptoJS.AES.decrypt(document.getElementById('aesdecrypt').value, document.getElementById('aespassphrase').value); alert(decrypted.toString(CryptoJS.enc.Utf8));"/></span>
 
 					<span class="print"><input type="button" name="print" id="bulkprint" value="Print" onclick="window.print();" /></span>
 				</div>
